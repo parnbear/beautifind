@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.MapFragment">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapja"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="0"></com.google.android.gms.maps.MapView>
+
+        <EditText
+            android:id="@+id/searchView"
+            android:layout_width="333dp"
+            android:layout_height="50dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/login_edit_background_white"
+            android:clickable="true"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/submitSearch"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="end"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/botton_background"
+            android:text="Go" />
+
+
+    </GridLayout>
+
+</FrameLayout>

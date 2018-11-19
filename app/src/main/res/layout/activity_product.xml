@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".buyer.ProductActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gutterLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gutterRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="280dp"
+            android:layout_height="262dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Product Image"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="3:2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/zhe"/>
+
+        <TextView
+            android:id="@+id/name_Product"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/gutterRight"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/photo"
+            tools:text="Zhecosmetics" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/gutterRight"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/name_Product"
+            tools:text="แป้งผสมรองพื้น" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@id/gutterRight"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/info"
+            tools:text="แป้งผสมรองพื้น เนื้อบางเบา ให้การปกปิด มีส่วนผสมของวิตามินอี คุมมัน ติดทน กันน้ำกันเหงื่อ สีไม่ดรอป ช่วยป้องกันแสงแดด" />
+
+        <View
+            android:id="@+id/borderPriceTop"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@id/price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <TextView
+            android:id="@+id/priceUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="฿"
+            app:layout_constraintBottom_toBottomOf="@id/price"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toTopOf="@id/price" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/priceUnit"
+            app:layout_constraintTop_toBottomOf="@+id/borderPriceTop"
+            tools:text="290" />
+
+        <TextView
+            android:id="@+id/seller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginEnd="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="0dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="473dp"
+            tools:text="By Admin" />
+
+        <View
+            android:id="@+id/borderPriceBottom"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/price" />
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edit_background"
+            android:text="buy"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="510dp" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

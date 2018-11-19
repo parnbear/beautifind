@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".seller.ProductUpdateActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gutterLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gutterRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/photos"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="5"
+            tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_product_update_photo" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:color/holo_orange_dark"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/add_Product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/product_name"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/photos" />
+
+        <EditText
+            android:id="@+id/name_Product"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="5dp"
+            android:hint="@string/add_product_name"
+            android:inputType="textPersonName"
+            android:maxLength="120"
+            app:layout_constraintEnd_toStartOf="@id/productNameLimit"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/add_Product"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/productNameLimit"
+            android:layout_width="62sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="15dp"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/name_Product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name_Product"
+            tools:text="120/120" />
+
+        <TextView
+            android:id="@+id/add_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/description"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/name_Product" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/description_Add"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@id/gutterRight"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/add_description"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <EditText
+            android:id="@+id/price_Input"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ems="10"
+            android:hint="@string/_100"
+            android:inputType="number"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="@id/price"
+            app:layout_constraintStart_toEndOf="@id/price"
+            app:layout_constraintTop_toTopOf="@id/price"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/stock"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/price" />
+
+        <EditText
+            android:id="@+id/stock_Input"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ems="10"
+            android:hint="@string/_15"
+            android:inputType="number"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="@id/stock"
+            app:layout_constraintStart_toEndOf="@id/stock"
+            app:layout_constraintTop_toTopOf="@+id/stock"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/shipping"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/shipping"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/stock" />
+
+        <EditText
+            android:id="@+id/add_Shipping"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/add_shipping"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@id/shipping"
+            app:layout_constraintStart_toEndOf="@id/shipping"
+            app:layout_constraintTop_toTopOf="@id/shipping" />
+
+        <Button
+            android:id="@+id/productSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shipping" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

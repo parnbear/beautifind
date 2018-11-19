@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="81dp">
+
+
+
+    <ImageView
+        android:id="@+id/productPhoto"
+        android:layout_width="145dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Product Photo"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/holo_red_dark" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="170dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="DDDDDDDD"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/seller_Name"
+        android:layout_width="170dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:text="DDDDDDDD"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />@tools:sample/lorem/random" />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="164dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintStart_toStartOf="@+id/productPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/seller_Name"
+        tools:text="฿280" />
+
+    <Button
+        android:id="@+id/removeButton"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/botton_background"
+        android:text="Delivered"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
+
+</android.support.constraint.ConstraintLayout>

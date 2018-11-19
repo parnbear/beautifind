@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".auth.UpdateProductActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gutterLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gutterRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/photos"
+            android:layout_width="382dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="5"
+            tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_product_update_photo" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toTopOf="@+id/productname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/add_picture" />
+
+        <TextView
+            android:id="@+id/productname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/product_name"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photos" />
+
+        <EditText
+            android:id="@+id/edit_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/login_edit_background_white"
+            android:drawablePadding="10dp"
+            android:hint="Add product name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85"
+            android:textColorHint="#9D9D85"
+            app:layout_constraintEnd_toStartOf="@id/productNameLimit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photos" />
+
+        <EditText
+            android:id="@+id/edit_description"
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/login_edit_background_white"
+            android:drawablePadding="10dp"
+            android:hint="Add description"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85"
+            android:textColorHint="#9D9D85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_description" />
+
+        <TextView
+            android:id="@+id/productNameLimit"
+            android:layout_width="62sp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            tools:layout_editor_absoluteX="290dp"
+            tools:layout_editor_absoluteY="220dp"
+            tools:text="120/120" />
+
+        <TextView
+            android:id="@+id/add_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Description :"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_product_name" />
+
+        <TextView
+            android:id="@+id/add_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Category :"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_price"
+            app:layout_goneMarginTop="10dp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Price :"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_description" />
+
+        <EditText
+            android:id="@+id/edit_price"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/login_edit_background_white"
+            android:hint="00.00 ฿"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85"
+            android:textColorHint="#9D9D85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price" />
+
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="8dp"
+            android:text="Stock :"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@+id/price"
+            app:layout_constraintTop_toBottomOf="@+id/edit_description" />
+
+        <EditText
+            android:id="@+id/edit_stock"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:background="@drawable/login_edit_background_white"
+            android:hint="0"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85"
+            android:textColorHint="#9D9D85"
+            app:layout_constraintStart_toEndOf="@+id/edit_price"
+            app:layout_constraintTop_toBottomOf="@+id/stock" />
+
+        <EditText
+            android:id="@+id/edit_category"
+            android:layout_width="348dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/login_edit_background_white"
+            android:hint="Category"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85"
+            android:textColorHint="#9D9D85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_category" />
+
+        <Button
+            android:id="@+id/productDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/botton_background_buy_sell"
+            android:text="delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.682"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_category" />
+
+        <Button
+            android:id="@+id/productSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/botton_background_buy_sell"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.324"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_category" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

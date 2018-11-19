@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".auth.LoginActivity">
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true" >
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/ic_logo"/>
+
+        <EditText
+            android:id="@+id/edit_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/login_edit_background"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="10dp"
+            android:hint="Email or mobile number"
+            android:padding="10dp"
+            android:textColorHint="#9D9D85"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_password"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_edit_background"
+        android:padding="10dp"
+        android:textColorHint="#9D9D85"
+        android:textColor="#9D9D85"
+        android:textColorHighlight="#9D9D85"/>
+
+    <TextView
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:padding="10dp"
+        android:layout_gravity="end"/>
+
+    <Button
+        android:id="@+id/btn_sign_in"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/botton_background"
+        android:text="Sign in"
+        android:textAllCaps="false"
+        android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/create_new_account"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botton_background"
+            android:text="Create new account"
+            android:textAllCaps="false"
+            android:textSize="20dp"/>
+    <com.google.android.gms.common.SignInButton
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/loginGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Google Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+</RelativeLayout>

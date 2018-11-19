@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ppp.beautifind">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+
+
+
+
+        <activity
+            android:name=".auth.SplashScreen"
+            android:theme="@style/Loginpage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+
+
+
+
+
+        <activity
+            android:name=".auth.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Loginpage" />
+        <activity
+            android:name=".buyer.ProductActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".buyer.ProductListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".seller.ProductUpdateActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".TempHome"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".auth.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".auth.BottomNav"
+            android:label="@string/title_activity_bottom_navigation"
+            android:theme="@style/Loginpage">
+        </activity>
+        <activity android:name=".buyer.OrderList" />
+        <activity android:name=".auth.Signin" />
+
+
+
+
+
+        <activity android:name=".auth.UpdateProductActivity"
+            android:theme="@style/Loginpage">
+
+        </activity>
+
+
+
+
+
+
+    </application>
+
+</manifest>

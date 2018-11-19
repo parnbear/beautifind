@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">37047475265-2b57tad93sojkqmc47i1l92vn4i7tuho.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://beautifind-bdb08.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">37047475265</string>
+    <string name="google_api_key" translatable="false">AIzaSyCYX8vFU3fhMa1SwhPfFK3sNnkGWX3uzwY</string>
+    <string name="google_app_id" translatable="false">1:37047475265:android:71e239ff1db9aa49</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCYX8vFU3fhMa1SwhPfFK3sNnkGWX3uzwY</string>
+    <string name="google_storage_bucket" translatable="false">beautifind-bdb08.appspot.com</string>
+    <string name="project_id" translatable="false">beautifind-bdb08</string>
+</resources>

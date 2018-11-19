@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_edit_background"
+    tools:context=".seller.ProductUpdateActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gutterLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gutterRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/photos"
+            android:layout_width="384dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/productname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:itemCount="5"
+            tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_product_update_photo" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="40dp"
+
+            android:contentDescription="@string/todo"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/add_picture" />
+
+        <TextView
+            android:id="@+id/productname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:text="@string/product_name"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            tools:layout_editor_absoluteY="182dp" />
+
+        <EditText
+            android:id="@+id/edit_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/login_edit_background_white"
+            android:drawablePadding="10dp"
+            android:hint="Add product name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85"
+            android:textColorHint="#9D9D85"
+            app:layout_constraintEnd_toStartOf="@id/productNameLimit"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            tools:layout_editor_absoluteY="203dp" />
+
+        <EditText
+            android:id="@+id/edit_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/login_edit_background_white"
+            android:drawablePadding="10dp"
+            android:hint="Add description"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85"
+            android:textColorHint="#9D9D85"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            tools:layout_editor_absoluteY="280dp" />
+
+        <TextView
+            android:id="@+id/productNameLimit"
+            android:layout_width="62sp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            tools:layout_editor_absoluteX="290dp"
+            tools:layout_editor_absoluteY="220dp"
+            tools:text="120/120" />
+
+        <TextView
+            android:id="@+id/add_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="10dp"
+            android:text="Description :"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            tools:layout_editor_absoluteY="259dp" />
+
+        <TextView
+            android:id="@+id/add_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Category :"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            app:layout_goneMarginTop="10dp"
+            tools:layout_editor_absoluteY="407dp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price :"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="332dp" />
+
+        <EditText
+            android:id="@+id/edit_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="250dp"
+            android:background="@drawable/login_edit_background_white"
+            android:hint="00.00 ฿"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85"
+            android:textColorHint="#9D9D85"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            tools:layout_editor_absoluteY="353dp" />
+
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="152dp"
+            android:text="Stock :"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            tools:layout_editor_absoluteY="332dp" />
+
+        <EditText
+            android:id="@+id/edit_stock"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="168dp"
+            android:background="@drawable/login_edit_background_white"
+            android:hint="0"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85"
+            android:textColorHint="#9D9D85"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            tools:layout_editor_absoluteY="353dp" />
+
+        <EditText
+            android:id="@+id/edit_category"
+            android:layout_width="348dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edit_background_white"
+            android:hint="Category"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#9D9D85"
+            android:textColorHighlight="#9D9D85"
+            android:textColorHint="#9D9D85"
+            app:layout_constraintStart_toStartOf="@id/gutterLeft"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <Button
+            android:id="@+id/productDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botton_background_buy_sell"
+            android:text="delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.682"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="483dp" />
+
+        <Button
+            android:id="@+id/productSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botton_background_buy_sell"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.324"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="483dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
