@@ -78,9 +78,12 @@ class AccountFragment : Fragment() {
             buttonSell!!.setBackgroundColor(Color.parseColor("#37bda5"))
         })
 
-        /*buttonAddProd!!.setOnClickListener({
-            var intent: Intent(this)
-        })*/
+        buttonAddProd!!.setOnClickListener({
+            var intent: Intent = Intent(ctx, UpdateProductActivity::class.java)
+            startActivity(intent)
+        })
+
+//        buyerInit()
 
         var recycleView = view.findViewById(R.id.recycleView) as RecyclerView
         recycleView.layoutManager = layoutManager

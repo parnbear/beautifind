@@ -13,8 +13,11 @@ import android.widget.Toast
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.tasks.Tasks
+import com.google.firebase.firestore.FirebaseFirestore
 import org.w3c.dom.Text
 import ppp.beautifind.R
+import ppp.beautifind.auth.model.FirebaseProducts
 import java.lang.Exception
 
 class BottomNav : AppCompatActivity(), OnMapReadyCallback {
@@ -26,12 +29,23 @@ class BottomNav : AppCompatActivity(), OnMapReadyCallback {
     private var testText : TextView? = null
     private var googleMap : MapView? = null
 
+    private val userIdTest = "1j6HLLE60icP37BRs85Q"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bottom_nav)
 
-        val navigationView = findViewById<View>(R.id.nav) as BottomNavigationView
+//        val productDataRef = FirebaseFirestore.getInstance().collection("products").getRe(userIdTest)
+//        val document = Tasks.await(productDataRef.get())
+//
+//        if (document.exists()) {
+//            val productList = document.toObject(FirebaseProducts::class.java)
+//            print("eiei")
+//        } else {
+//            print("bor mee woi")
+//        }
 
+        val navigationView = findViewById<View>(R.id.nav) as BottomNavigationView
 
         val bottomNavigation: BottomNavigationView = (findViewById(R.id.nav))
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
@@ -46,7 +60,7 @@ class BottomNav : AppCompatActivity(), OnMapReadyCallback {
                 val fragment = HomeFragment.newInstance()
                 openFragment(fragment)
 
-                Toast.makeText(this@BottomNav, "Home is Clicked", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@BottomNav, "Home is Clicked", Toast.LENGTH_SHORT).show()
 
                 return@setOnNavigationItemSelectedListener true
             }
@@ -54,7 +68,7 @@ class BottomNav : AppCompatActivity(), OnMapReadyCallback {
                 val fragment = CategoryFragment.newInstance()
                 openFragment(fragment)
 
-                Toast.makeText(this@BottomNav, "Category is Clicked", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@BottomNav, "Category is Clicked", Toast.LENGTH_SHORT).show()
 
                 return@setOnNavigationItemSelectedListener true
             }
@@ -62,7 +76,7 @@ class BottomNav : AppCompatActivity(), OnMapReadyCallback {
                 val fragment = MapFragment.newInstance()
                 openFragment(fragment)
 
-                Toast.makeText(this@BottomNav, "Map is Clicked", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@BottomNav, "Map is Clicked", Toast.LENGTH_SHORT).show()
 
                 return@setOnNavigationItemSelectedListener true
             }
@@ -71,7 +85,9 @@ class BottomNav : AppCompatActivity(), OnMapReadyCallback {
                 fragment.accountInit(this@BottomNav)
                 openFragment(fragment)
 
-                Toast.makeText(this@BottomNav, "Account is Clicked", Toast.LENGTH_SHORT).show()
+
+
+//                Toast.makeText(this@BottomNav, "Account is Clicked", Toast.LENGTH_SHORT).show()
 
                 return@setOnNavigationItemSelectedListener true
             }
